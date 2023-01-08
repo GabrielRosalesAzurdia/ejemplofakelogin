@@ -3,14 +3,43 @@
 
 {% block content %}
     <div class="cover-most-screen row align-items-center">
-        <div class="col-sm">
+
+        <div class="col-sm left-side">
             <img src="{% static 'assets/images/facebooklogo.svg' %}" alt="facebooklogo">
-            <h2>
+            <h2 class="pb-5">
                 Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida.
             </h2>
         </div>
-        <div class="col-sm">
-            FORM
+
+        <div class="col-sm right-side">
+            <form action="" method="post" class="card container shadow  bg-white rounded w-75 p-3 mb-2">
+                <div class="card-body">
+                    <div class="mb-3">
+                        <input class="form-control" type="text" placeholder="Correo electrónico o número de teléfono">
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control" type="password" placeholder="Contraseña">
+                    </div>
+                    <div class="d-grid gap-2 mb-3" id="firstbutton">
+                        <button class="btn btn-primary fw-bold">
+                            Iniciar seción
+                        </button>
+                    </div>
+                    <div class="text-center">
+                        <a href="">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <hr>
+                    <div class="text-center pt-3" id="secondbutton">
+                        <button class="btn btn-success fw-bold">
+                            Crear cuenta nueva
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <p class="pt-3">
+                <a href="">Crea una página</a> para una celebridad, una marca o un <br> negocio.
+            </p>
         </div>
+        
     </div>
 {% endblock %}
