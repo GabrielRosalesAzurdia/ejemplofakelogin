@@ -1,0 +1,21 @@
+* { padding: 0; margin: 0; }
+html, body, #fullheight {
+    min-height: 100% !important;
+    height: 100%;
+}
+
+.body{
+    background-color: #f0f2f5;
+    color: #1c1e21;
+    height: 80%;
+}
+
+.cover-most-screen{
+    height: 80%;
+}
+
+.footer{
+    background-color: #ffffff;
+    color: #8a8d91;
+    text-align: center;
+}
