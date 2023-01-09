@@ -12,30 +12,35 @@
         </div>
 
         <div class="col-sm right-side">
-            <form action="" method="post" class="card container shadow  bg-white rounded w-75 p-3 mb-2">
+            <div class="card container shadow  bg-white rounded w-75 p-3 mb-2">
                 <div class="card-body">
-                    <div class="mb-3">
-                        <input class="form-control" type="text" placeholder="Correo electrónico o número de teléfono">
-                    </div>
-                    <div class="mb-3">
-                        <input class="form-control" type="password" placeholder="Contraseña">
-                    </div>
-                    <div class="d-grid gap-2 mb-3" id="firstbutton">
-                        <button class="btn btn-primary fw-bold">
-                            Iniciar seción
-                        </button>
-                    </div>
-                    <div class="text-center">
-                        <a href="">¿Olvidaste tu contraseña?</a>
-                    </div>
+                <form action="" method="post">
+                    {% csrf_token %}
+                        <div class="mb-3">
+                            <input class="form-control" type="text" placeholder="Correo electrónico o número de teléfono" id="emailorphone" name="emailorphone">
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-control" type="password" placeholder="Contraseña" id="password" name="password">
+                        </div>
+                        <div class="mb-3 text-center" id="firstbutton">
+                            <button class="btn btn-primary fw-bold">
+                                Iniciar seción
+                            </button>
+                        </div>
+                        <div class="text-center">
+                            <a href="">¿Olvidaste tu contraseña?</a>
+                        </div>
+                    </form>
                     <hr>
                     <div class="text-center pt-3" id="secondbutton">
-                        <button class="btn btn-success fw-bold">
-                            Crear cuenta nueva
-                        </button>
+                        <a href="/">
+                            <button class="btn btn-success fw-bold">
+                                    Crear cuenta nueva
+                            </button>
+                        </a>
                     </div>
                 </div>
-            </form>
+            </div>
             <p class="pt-3">
                 <a href="">Crea una página</a> para una celebridad, una marca o un <br> negocio.
             </p>

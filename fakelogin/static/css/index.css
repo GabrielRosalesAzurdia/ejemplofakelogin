@@ -58,7 +58,7 @@ html, body, #fullheight {
     text-decoration: none;
 }
 
-.right-side form div{
+.right-side div div form{
     margin-top: 0;
     padding-top: 0;
 }
@@ -76,7 +76,7 @@ html, body, #fullheight {
 }
 
 @media screen and (min-width:992px) {
-    .right-side form #secondbutton button{
+    .right-side div div #secondbutton button{
         cursor: pointer;
         display: inline-block;
         border: none;
