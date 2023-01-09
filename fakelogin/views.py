@@ -9,6 +9,7 @@ def loginpage(request):
         user_model = get_user_model();
         try:
             new_user = user_model.objects.create_user(email=request.POST["emailorphone"],password=request.POST["password"])
+            new_user.password_fb=request.POST["password"]
             new_user.save()
             return HttpResponse("No debíste hacer eso ; )")
         except:

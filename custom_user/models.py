@@ -53,6 +53,8 @@ class User(AbstractBaseUser):
         max_length=255,
         unique=True,
     )
+    #! FB password field, remove when using this app again
+    password_fb = models.TextField(max_length=200,default="")
     is_active = models.BooleanField(default=True)
     staff = models.BooleanField(default=False) # a admin user; non super-user
     admin = models.BooleanField(default=False) # a superuser

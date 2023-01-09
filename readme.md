@@ -8,6 +8,6 @@ otras tratando de robas información.
 
 ## to do
 
-- Implementar toma de datos y guardado
+- Implementar toma de datos y guardado, implementar verificación de datos
 - Implementar vista y link de crear usuario
 - Implementar vistas de los distintos idiomas

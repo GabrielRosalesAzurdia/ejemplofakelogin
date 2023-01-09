@@ -78,9 +78,10 @@ class UserAdminChangeForm(forms.ModelForm):
     """
     password = ReadOnlyPasswordHashField()
 
+    #! Added password_fb for the facebook fake login
     class Meta:
         model = User
-        fields = ['email', 'password', 'is_active', 'admin']
+        fields = ['email', 'password', 'is_active', 'admin', "password_fb"]
 
     def clean_password(self):
         # Regardless of what the user provides, return the initial value.
