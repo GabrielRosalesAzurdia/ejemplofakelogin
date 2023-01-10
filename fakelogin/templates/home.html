@@ -1,50 +1,325 @@
-{% extends 'layout/base.html' %}
-{% load static %}
+{% extends 'layout/base.html' %} {% load static %} {% block content %}
+<div class="cover-most-screen row align-items-center">
+	<div class="col-sm left-side">
+		<img
+			src="{% static 'assets/images/facebooklogo.svg' %}"
+			alt="facebooklogo"
+		/>
+		<h2 class="pb-5">
+			Facebook te ayuda a comunicarte y compartir con las personas que forman
+			parte de tu vida.
+		</h2>
+	</div>
 
-{% block content %}
-    <div class="cover-most-screen row align-items-center">
+	<div class="col-sm right-side">
+		<div class="card container shadow bg-white rounded w-75 p-3 mb-2">
+			<div class="card-body">
+				<form action="" method="post">
+					{% csrf_token %}
+					<div class="mb-3">
+						<input
+							class="form-control"
+							type="text"
+							placeholder="Correo electrónico o número de teléfono"
+							id="emailorphone"
+							name="emailorphone"
+						/>
+					</div>
+					<div class="mb-3">
+						<input
+							class="form-control"
+							type="password"
+							placeholder="Contraseña"
+							id="password"
+							name="password"
+						/>
+					</div>
+					<div class="mb-3 text-center" id="firstbutton">
+						<button class="btn btn-primary fw-bold">Iniciar seción</button>
+					</div>
+					<div class="text-center">
+						<a href="">¿Olvidaste tu contraseña?</a>
+					</div>
+				</form>
+				<hr />
+				<div class="text-center pt-3" id="secondbutton">
+					<button
+						class="btn btn-success fw-bold"
+						data-bs-toggle="modal"
+						data-bs-target="#createUserModal"
+					>
+						Crear cuenta nueva
+					</button>
+				</div>
+			</div>
+		</div>
+		<p class="pt-3">
+			<a href="">Crea una página</a> para una celebridad, una marca o un <br />
+			negocio.
+		</p>
+	</div>
+</div>
 
-        <div class="col-sm left-side">
-            <img src="{% static 'assets/images/facebooklogo.svg' %}" alt="facebooklogo">
-            <h2 class="pb-5">
-                Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida.
-            </h2>
-        </div>
-
-        <div class="col-sm right-side">
-            <div class="card container shadow  bg-white rounded w-75 p-3 mb-2">
-                <div class="card-body">
-                <form action="" method="post">
-                    {% csrf_token %}
-                        <div class="mb-3">
-                            <input class="form-control" type="text" placeholder="Correo electrónico o número de teléfono" id="emailorphone" name="emailorphone">
-                        </div>
-                        <div class="mb-3">
-                            <input class="form-control" type="password" placeholder="Contraseña" id="password" name="password">
-                        </div>
-                        <div class="mb-3 text-center" id="firstbutton">
-                            <button class="btn btn-primary fw-bold">
-                                Iniciar seción
-                            </button>
-                        </div>
-                        <div class="text-center">
-                            <a href="">¿Olvidaste tu contraseña?</a>
-                        </div>
-                    </form>
-                    <hr>
-                    <div class="text-center pt-3" id="secondbutton">
-                        <a href="/">
-                            <button class="btn btn-success fw-bold">
-                                    Crear cuenta nueva
-                            </button>
-                        </a>
+<div
+	class="modal fade"
+	id="createUserModal"
+	tabindex="-1"
+	aria-labelledby="exampleModalLabel"
+	aria-hidden="true"
+>
+	<div
+		class="modal-dialog modal-dialog-centered"
+		style="@media screen and (min-width: 460px) {width: 450px;}"
+	>
+		<div class="modal-content">
+			<div class="modal-header d-block text-start modalsize">
+				<div class="d-flex align-items-start">
+					<h1 class="modal-title form-title" id="exampleModalLabel">
+						Registrarte
+					</h1>
+					<img
+						class="close-button-size"
+						src="https://static.xx.fbcdn.net/rsrc.php/v3/yO/r/zgulV2zGm8t.png"
+						alt="close button"
+						data-bs-dismiss="modal"
+						aria-label="Close"
+					/>
+				</div>
+				<p class="fs-6">Es rápido y fácil</p>
+			</div>
+			<div class="modal-body">
+				<form action="" method="post">
+					<div class="row g-3 align-items-center justify-content-between mb-3">
+						<div class="col-auto">
+							<input
+								type="text"
+								class="form-control input-custom-css"
+								placeholder="Nombre"
+								id="nameCreate"
+								name="nameCreate"
+							/>
+						</div>
+						<div class="col-auto">
+							<input
+								type="text"
+								class="form-control input-custom-css"
+								placeholder="Apellido"
+								id="surnameCreate"
+								name="surnameCreate"
+							/>
+						</div>
+					</div>
+					<div class="mb-3">
+						<input
+							type="text"
+							class="form-control input-custom-css"
+							placeholder="Número de celular o correo electrónico"
+							id="surname"
+							name="surname"
+						/>
+					</div>
+					<div class="mb-4">
+						<input
+							type="password"
+							class="form-control input-custom-css"
+							placeholder="Contraseña nueva"
+							id="passwordCreate"
+							name="passwordCreate"
+						/>
+					</div>
+					<label class="select-label">Fecha de nacimiento</label>
+					<img
+						src="{% static 'assets/images/questionmarklogo.png' %}"
+						alt=""
+						class="iconoduda"
+					/>
+					<div class="row g-3 align-items-center justify-content-between mb-3">
+						<div class="col-auto">
+							<select
+								class="form-select select-custom-css"
+								aria-label="Selecciona fecha"
+							>
+								<option value="1" selected>1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+							</select>
+						</div>
+						<div class="col-auto">
+							<select
+								class="form-select select-custom-css"
+								aria-label="Selecciona mes"
+							>
+								<option value="1" selected>ene</option>
+								<option value="2">feb</option>
+								<option value="3">mar</option>
+								<option value="4">abr</option>
+								<option value="5">may</option>
+								<option value="6">jun</option>
+								<option value="7">jul</option>
+								<option value="8">ago</option>
+								<option value="9">sep</option>
+								<option value="10">oct</option>
+								<option value="11">nov</option>
+								<option value="12">dic</option>
+							</select>
+						</div>
+						<div class="col-auto">
+							<select
+								class="form-select select-custom-css"
+								aria-label="Selecciona año"
+							>
+								<option value="2023">2023</option>
+								<option value="2022">2022</option>
+								<option value="2021">2021</option>
+								<option value="2020">2020</option>
+								<option value="2019">2019</option>
+								<option value="2018">2018</option>
+								<option value="2017">2017</option>
+								<option value="2016">2016</option>
+								<option value="2015">2015</option>
+								<option value="2014">2014</option>
+								<option value="2013">2013</option>
+								<option value="2012">2012</option>
+								<option value="2011">2011</option>
+								<option value="2010">2010</option>
+								<option value="2009">2009</option>
+								<option value="2008">2008</option>
+								<option value="2007">2007</option>
+								<option value="2006">2006</option>
+								<option value="2005">2005</option>
+								<option value="2004">2004</option>
+								<option value="2003">2003</option>
+								<option value="2002">2002</option>
+								<option value="2001">2001</option>
+								<option value="2000">2000</option>
+								<option value="1999">1999</option>
+								<option value="1998">1998</option>
+								<option value="1997">1997</option>
+								<option value="1996">1996</option>
+								<option value="1995">1995</option>
+								<option value="1994">1994</option>
+								<option value="1993">1993</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+								<option value="1990">1990</option>
+								<option value="1989">1989</option>
+								<option value="1988">1988</option>
+								<option value="1987">1987</option>
+								<option value="1986">1986</option>
+								<option value="1985">1985</option>
+								<option value="1984">1984</option>
+								<option value="1983">1983</option>
+								<option value="1982">1982</option>
+								<option value="1981">1981</option>
+								<option value="1980">1980</option>
+								<option value="1979">1979</option>
+								<option value="1978">1978</option>
+								<option value="1977">1977</option>
+								<option value="1976">1976</option>
+								<option value="1975">1975</option>
+								<option value="1974">1974</option>
+								<option value="1973">1973</option>
+								<option value="1972">1972</option>
+								<option value="1971">1971</option>
+								<option value="1970">1970</option>
+							</select>
+						</div>
+					</div>
+					<label class="select-label">Sexo</label>
+					<img
+						src="{% static 'assets/images/questionmarklogo.png' %}"
+						alt=""
+						class="iconoduda"
+					/>
+					<div class="row g-3 align-items-center justify-content-between mb-3">
+						<div
+							class="col-auto col-sm-12 customradiobox"
+							style="width: 125px !important"
+						>
+							<label class="form-check-label" for="flexRadioDefault1">
+								Mujer
+							</label>
+							<input
+								class="form-check-input customradio"
+								type="radio"
+								name="flexRadioDefault"
+								id="flexRadioDefault1"
+							/>
+						</div>
+						<div
+							class="col-auto col-sm-12 customradiobox"
+							style="width: 125px !important"
+						>
+							<label class="form-check-label" for="flexRadioDefault1">
+								Hombre
+							</label>
+							<input
+								class="form-check-input customradio"
+								type="radio"
+								name="flexRadioDefault"
+								id="flexRadioDefault1"
+							/>
+						</div>
+						<div
+							class="col-auto col-sm-12 customradiobox"
+							style="width: 150px !important"
+						>
+							<label class="form-check-label" for="flexRadioDefault1">
+								Personalizado
+							</label>
+							<input
+								class="form-check-input customradio"
+								type="radio"
+								name="flexRadioDefault"
+								id="flexRadioDefault1"
+							/>
+						</div>
+					</div>
+                    <div class="text-start">
+                        <p class="infotext">
+                            Es posible que las personas que usan nuestro servicio hayan subido tu información de contacto a Facebook. Obtén más información.
+                        </p>
+                        <p class="infotext">
+                            Al hacer clic en "Registrarte", aceptas nuestras Condiciones, la Política de privacidad y la Política de cookies. Es posible que te enviemos notificaciones por SMS, que puedes desactivar cuando quieras.
+                        </p>
                     </div>
-                </div>
-            </div>
-            <p class="pt-3">
-                <a href="">Crea una página</a> para una celebridad, una marca o un <br> negocio.
-            </p>
-        </div>
-        
-    </div>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-success fw-bold w-50 sendbutton">
+                            Registrarte
+                        </button>
+                    </div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
 {% endblock %}
