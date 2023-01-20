@@ -6,8 +6,13 @@ django.
 Esta página se usará para ejemplificar los peligros de páginas que imitan a 
 otras tratando de robas información.
 
+# Comandos para lanzar en lan
+
+En settings.py cambiar en allow hosts por "*"
+Colocar el comando python manage.py runserver 0.0.0.0:8888
+Luego abrir la cmd y escribir piconfig
+Usar la dirección ipv4 y agregar el :8888 al final
+
 ## to do
 
-- Implementar toma de datos y guardado, implementar verificación de datos
-- Implementar vista y link de crear usuario
 - Implementar vistas de los distintos idiomas
