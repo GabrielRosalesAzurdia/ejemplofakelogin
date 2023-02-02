@@ -5,8 +5,10 @@ function handleOnChange (){
 }
 
 function loadmodal() {
-    if('{{showmodal}}' == 'show'){
-        document.getElementById("#createUserModal").modal("show")
+    let meta = document.querySelector('meta[name="load-modal-name"]').content
+    if(meta == 'show'){        
+        let myModal = new bootstrap.Modal(document.getElementById('createUserModal'))
+        myModal.show()
     }
 }
-window.onload = codeAddress;
+window.onload = loadmodal;
