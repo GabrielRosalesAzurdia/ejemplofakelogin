@@ -1,4 +1,4 @@
-.modalsize{
+.modalsize {
 	padding-bottom: 0 !important;
 }
 
@@ -61,19 +61,19 @@
 
 .customradiobox {
 	border: 1px solid #ccd0d5 !important;
-    border-radius: 5px;
+	border-radius: 5px;
 	box-sizing: border-box !important;
-    width: 125px !important;   
-    padding: 5px;
+	width: 125px !important;
+	padding: 5px;
 }
 
-.customradio{
-    float: right;
+.customradio {
+	float: right;
 }
 
-.infotext{
+.infotext {
 	color: #777;
-    font-size: 11px;
+	font-size: 11px;
 	width: auto;
 	margin: 1em 0;
 }
