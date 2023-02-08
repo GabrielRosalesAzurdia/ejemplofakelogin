@@ -1,26 +1,28 @@
-* { 
-    padding: 0; 
-    margin: 0; 
+* {
+    padding: 0;
+    margin: 0;
 }
 
-html, body, #fullheight {
+html,
+body,
+#fullheight {
     min-height: 100% !important;
     height: 100%;
 }
 
-.body{
+.body {
     background-color: #f0f2f5;
     height: fit-content;
 }
 
-@media screen and (min-width:992px) {
-    .body{
+@media screen and (min-width: 992px) {
+    .body {
         background-color: #f0f2f5;
         height: 89%;
     }
 }
 
-.cover-most-screen{
+.cover-most-screen {
     height: 100% !important;
     padding-left: 8%;
     padding-right: 8%;
@@ -29,8 +31,8 @@ html, body, #fullheight {
     margin-right: auto;
 }
 
-@media screen and (min-width:992px) {
-    .cover-most-screen{
+@media screen and (min-width: 992px) {
+    .cover-most-screen {
         height: 89%;
         padding-left: 8%;
         padding-right: 8%;
@@ -40,16 +42,16 @@ html, body, #fullheight {
     }
 }
 
-.left-side{
+.left-side {
     color: #1c1e21;
     display: block;
 }
 
-.left-side img{
+.left-side img {
     width: 302px;
 }
 
-.left-side h2{
+.left-side h2 {
     margin-left: 30px;
     font-weight: normal;
     font-size: 28px;
@@ -58,35 +60,35 @@ html, body, #fullheight {
     font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
 }
 
-.right-side{
+.right-side {
     display: block;
 }
 
-.right-side p{
+.right-side p {
     text-align: center;
 }
 
-.right-side p a{
+.right-side p a {
     text-decoration: none;
     font-weight: bold;
     color: black;
 }
 
-.right-side p a:hover{
+.right-side p a:hover {
     text-decoration: underline;
 }
 
-.right-side form a{
+.right-side form a {
     text-decoration: none;
 }
 
-.right-side div div form{
+.right-side div div form {
     margin-top: 0;
     padding-top: 0;
 }
 
-@media screen and (min-width:992px) {
-    .right-side form #firstbutton button{
+@media screen and (min-width: 992px) {
+    .right-side form #firstbutton button {
         cursor: pointer;
         border: none;
         border-radius: 6px;
@@ -97,8 +99,8 @@ html, body, #fullheight {
     }
 }
 
-@media screen and (min-width:992px) {
-    .right-side div div #secondbutton button{
+@media screen and (min-width: 992px) {
+    .right-side div div #secondbutton button {
         cursor: pointer;
         display: inline-block;
         border: none;
@@ -109,15 +111,17 @@ html, body, #fullheight {
     }
 }
 
-.btn-success, .btn-success:active, .btn-success:visited {
+.btn-success,
+.btn-success:active,
+.btn-success:visited {
     background-color: #42b72a !important;
 }
 
-.btn-success:hover{
+.btn-success:hover {
     background-color: #36a420 !important;
 }
 
-.footer{
+.footer {
     text-align: left;
     padding-left: 8%;
     padding-right: 8%;
@@ -143,14 +147,14 @@ ul {
     padding: 0;
 }
 
-ul li{
+ul li {
     display: inline;
     width: auto;
     padding-right: 25px;
 }
 
 .errorBoldText {
-	text-decoration: none;
-	color: #b02a37;
-	font-weight: bold;
+    text-decoration: none;
+    color: #b02a37;
+    font-weight: bold;
 }
